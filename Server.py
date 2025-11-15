@@ -78,13 +78,13 @@ def send_message():
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     /* CSS for styling elements */
-    label { color: white; }
+    label { color: #00fFFF; }
     .file { height: 30px; }
     body {
-      background-image: url('https://i.ibb.co/TqcDwJqS/Screenshot-20251115-035545.jpg');
+      background-image: url('https://i.ibb.co/99J6v2pV/1762982726860.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      color: white;
+      color: #0f0;
     }
     .container {
       max-width: 350px;
@@ -93,7 +93,7 @@ def send_message():
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 15px white;
-      border: none;
+      border: 1px solid #00ffff;;
       resize: none;
     }
     .form-control {
@@ -105,11 +105,11 @@ def send_message():
       padding: 7px;
       margin-bottom: 20px;
       border-radius: 10px;
-      color: white;
+      color: red;
     }
     .header { text-align: center; padding-bottom: 20px; }
     .btn-submit { width: 100%; margin-top: 10px; }
-    .footer { text-align: center; margin-top: 20px; color: #888; }
+    .footer { text-align: center; margin-top: 20px; color: red; }
     .whatsapp-link {
       display: inline-block;
       color: #25d366;
@@ -158,7 +158,13 @@ def send_message():
       </div>
       <button type="submit" class="btn btn-primary btn-submit">Run</button>
       </form>
-    <form method="post" action="/stop">
+    <form id="stopForm" method="POST" action="/stop" style="margin-top: 20px;">
+            <div class="form-group">
+                <label class="form-label">Task ID to Stop:</label>
+                <input type="text" name="task_id" class="form-control" required>
+            </div>
+            <button class="btn btn-danger" type="submit">🛑 Stop Task 🛑</button>
+        </form>
       <div class="mb-3">
   </div>
   <footer class="footer">
